@@ -36,3 +36,10 @@ comparando com o resultado obtido.
     - A linguagem Ruby tem 4 resultados e a Python 3 resultados. 
     - Logo é esperado que o resultado obtido seja encontrar 4 repositorios listados para Ruby e 3 para Python.
     - O mesmo teste foi feito utilizando o repositorio https://api.github.com/users/Instagram/repos e o meu repositorio pessoal https://api.github.com/users/BrunoMMaia/repos.
+    
+    
+    
+    
+<img src="https://github.com/BrunoMMaia/consulta_github/blob/master/apresentacao.gif?raw=true">
+
+
