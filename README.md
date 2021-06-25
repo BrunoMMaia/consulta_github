@@ -12,15 +12,12 @@
      - Dentro do arquivo App.js o elementro 'Container' foi importado do material-ui
 
  4 - O primeiro componente desenvolvido foi o Pesquisa.js. 
-      TextField -> campo onde vai ser informado o nome do repositorio. 
+      - TextField -> campo onde vai ser informado o nome do repositorio. 
       a variável 'usuario' captura o valor do campo com o evento 'Campturacampo'
-
-      Button -> no evento 'onClick' é feito a consulta do repositorio chamando o evento 'getPesquisa'. 
+      - Button -> no evento 'onClick' é feito a consulta do repositorio chamando o evento 'getPesquisa'. 
       Para fazer a requisição HTTP a Api do Github foi utilizado o axios. 
-
       Na API do GitHub é feita uma requisição Get passando o nome do usario. Ela retorna todos os repositorios do usuario.   
-        Exemplo: 'https://api.github.com/users/' + usuario + '/repos'
- 
+        Exemplo: 'https://api.github.com/users/' + usuario + '/repos' 
       Esse resultado é armazenado no array repositórios.
 
 5 - O array repositorios é enviado para o componente CardComponet.js como parametro através da props.  
@@ -28,7 +25,6 @@
 6 - Dentro do componente CardComponet.js o resultado é preparado para ser exibido na tela. 
     - Primeiro temos um array que recebe o campo 'language' com as linguagens dos repositorios.
       É retirado os valores nulos e também os elementos repetidos.
-
     - Ao imprimir esse array de linguagens, é feito um filter() comparando com o array recebido pela props, para saber em qual repositorio 
     a linguagem que está sendo listada está presente. E assim já listado os nomes dos repositorios.
 
@@ -36,8 +32,7 @@
 - Para realizar os testes primeiro foi definido o Resultado final esperado e depois 
 comparando com o resultado obtido. 
     Exemplo:
-    - Utilizando o repositório https://github.com/facebook
-    - A linguagem Ruby tem 9 resultados e a Python 14 resultados. 
-    - Logo é esperado que o resultado obtido seja encontrar 9 repositorios listados para Ruby e 14 para Python.
-
-    - O mesmo teste foi feito utilizando o repositorio https://github.com/Instagram e o meu repositorio pessoal https://github.com/BrunoMMaia.
+    - Utilizando a consulta https://api.github.com/users/Facebook/repos 
+    - A linguagem Ruby tem 4 resultados e a Python 3 resultados. 
+    - Logo é esperado que o resultado obtido seja encontrar 4 repositorios listados para Ruby e 3 para Python.
+    - O mesmo teste foi feito utilizando o repositorio https://api.github.com/users/Instagram/repos e o meu repositorio pessoal https://api.github.com/users/BrunoMMaia/repos.
